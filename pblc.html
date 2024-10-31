@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Disable browser caching of dialog window -->
+        <meta charset="UTF-8">
+        <meta http-equiv="cache-control" content="no-cache" />
+        <meta http-equiv="expires" content="0" />
+        <meta http-equiv="pragma" content="no-cache" />
+
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <link rel="stylesheet" href="./popup-window.css">
+
+
+    </head>
+    <body>
+      <form style="padding: 20px">
+        <span class="search-handle" for="chat_handle">Search Chat Handles That You Want To Embed</span><br />
+        <div class="dropdown">
+          <input type="text" class="search-bar" id='search_chat' name="chat_handle" placeholder="Search.." autocomplete="off"> <!-- Search bar, put it as type=text because of the restrictions of styling input type=search -->
+          <div id="myDropdown" class="dropdown-content">
+          </div>
+        </div>
+        <span class="Embed-Live-Public-Chat">Embed Live Public Chat</span>
+        <div class="Default-Size">Select a size for your embedded live chat</div>
+        <div class="chat_embed_templates">
+          <span class="embed-template portrait active"></span>
+          <span class="embed-template landscape"></span>
+          <span class="embed-template square"></span>
+        </div>
+        <label for="height" class="Custom-Size">Dimensions (Width x Height):</label>
+        <input class="HW-Rectangle" type="number" id='width_value' autocomplete="off" name="width" />
+        <span style="margin-right: 0px">X</span>
+        <input class="HW-Rectangle" type="number" id='height_value' autocomplete="off" name="height" /><br/><br/>
+        <button class="outlined" type="submit" value="submit">Insert Shortcode</button>
+        <!--<input type="submit" value="Insert Shortcode" />-->
+      </form>
+      <script src="./popup-window.js">
+      </script>
+    </body>
+</html>
